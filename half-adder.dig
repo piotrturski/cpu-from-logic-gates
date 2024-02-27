@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>i_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>i_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>sum</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>o</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>XOr</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="360" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="360" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>carry out</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>c</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>half-adder tests</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>           i_1 i_2   o c
+
+repeat(4) bits(2, n) (n&amp;1 ^ n&gt;&gt;1&amp;1) x </dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="420"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="260" y="160"/>
+      <p2 x="320" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="320" y="160"/>
+      <p2 x="360" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="240"/>
+      <p2 x="280" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="240"/>
+      <p2 x="360" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="320"/>
+      <p2 x="360" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="180"/>
+      <p2 x="580" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="320" y="280"/>
+      <p2 x="360" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="300"/>
+      <p2 x="580" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="320" y="160"/>
+      <p2 x="320" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="200"/>
+      <p2 x="360" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="240"/>
+      <p2 x="280" y="320"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
