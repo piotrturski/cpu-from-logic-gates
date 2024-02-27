@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>1 when we add 1 from previous operation</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>c_in</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>i_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>i_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>o</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>half-adder.dig</elementName>
+      <elementAttributes/>
+      <pos x="320" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>half-adder.dig</elementName>
+      <elementAttributes/>
+      <pos x="460" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="560" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>c_out</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>full-adder tests</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>c_in i_1 i_2  o c_out
+
+0 0 0    0 0
+0 0 1    1 0
+0 1 0    1 0
+0 1 1    0 1
+1 0 0    1 0
+1 0 1    0 1
+1 1 0    0 1
+1 1 1    1 1
+</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="180"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="420" y="80"/>
+      <p2 x="560" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="-20"/>
+      <p2 x="460" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="20"/>
+      <p2 x="720" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="20"/>
+      <p2 x="300" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="40"/>
+      <p2 x="320" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="40"/>
+      <p2 x="460" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="40"/>
+      <p2 x="560" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="60"/>
+      <p2 x="320" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="60"/>
+      <p2 x="420" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="60"/>
+      <p2 x="720" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="60"/>
+      <p2 x="420" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="20"/>
+      <p2 x="300" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="-20"/>
+      <p2 x="460" y="20"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
