@@ -7,26 +7,6 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>a_1</string>
-        </entry>
-      </elementAttributes>
-      <pos x="260" y="-20"/>
-    </visualElement>
-    <visualElement>
-      <elementName>In</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>b_1</string>
-        </entry>
-      </elementAttributes>
-      <pos x="260" y="20"/>
-    </visualElement>
-    <visualElement>
-      <elementName>In</elementName>
-      <elementAttributes>
-        <entry>
           <string>Description</string>
           <string>1 when we add 1 from previous operation</string>
         </entry>
@@ -38,11 +18,31 @@
       <pos x="260" y="-60"/>
     </visualElement>
     <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>a_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>a_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="80"/>
+    </visualElement>
+    <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>o_1</string>
+          <string>o_0</string>
         </entry>
       </elementAttributes>
       <pos x="540" y="-20"/>
@@ -52,10 +52,10 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>c_out</string>
+          <string>o_1</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="340"/>
+      <pos x="540" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -65,17 +65,17 @@
           <string>a_2</string>
         </entry>
       </elementAttributes>
-      <pos x="260" y="80"/>
+      <pos x="260" y="180"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>b_2</string>
+          <string>a_3</string>
         </entry>
       </elementAttributes>
-      <pos x="260" y="120"/>
+      <pos x="260" y="280"/>
     </visualElement>
     <visualElement>
       <elementName>full-adder.dig</elementName>
@@ -100,7 +100,7 @@
           <string>o_2</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="80"/>
+      <pos x="540" y="180"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -110,17 +110,17 @@
           <string>o_3</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="180"/>
+      <pos x="540" y="280"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>o_4</string>
+          <string>c_out</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="280"/>
+      <pos x="540" y="340"/>
     </visualElement>
     <visualElement>
       <elementName>full-adder.dig</elementName>
@@ -132,17 +132,27 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>a_3</string>
+          <string>b_0</string>
         </entry>
       </elementAttributes>
-      <pos x="260" y="180"/>
+      <pos x="260" y="20"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>b_3</string>
+          <string>b_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>b_2</string>
         </entry>
       </elementAttributes>
       <pos x="260" y="220"/>
@@ -152,17 +162,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>a_4</string>
-        </entry>
-      </elementAttributes>
-      <pos x="260" y="280"/>
-    </visualElement>
-    <visualElement>
-      <elementName>In</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>b_4</string>
+          <string>b_3</string>
         </entry>
       </elementAttributes>
       <pos x="260" y="320"/>
@@ -177,7 +177,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>        c_in a_4 a_3 a_2 a_1 b_4 b_3 b_2 b_1    c_out o_4 o_3 o_2 o_1
+            <dataString>        c_in a_3 a_2 a_1 a_0 b_3 b_2 b_1 b_0    c_out o_3 o_2 o_1 o_0
 
 loop(c, 2)
  loop(a, 16)
