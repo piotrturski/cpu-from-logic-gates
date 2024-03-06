@@ -34,10 +34,6 @@
           <string>Label</string>
           <string>D_0</string>
         </entry>
-        <entry>
-          <string>isHighZ</string>
-          <boolean>true</boolean>
-        </entry>
       </elementAttributes>
       <pos x="580" y="480"/>
     </visualElement>
@@ -47,10 +43,6 @@
         <entry>
           <string>Label</string>
           <string>D_1</string>
-        </entry>
-        <entry>
-          <string>isHighZ</string>
-          <boolean>true</boolean>
         </entry>
       </elementAttributes>
       <pos x="580" y="400"/>
@@ -62,10 +54,6 @@
           <string>Label</string>
           <string>D_2</string>
         </entry>
-        <entry>
-          <string>isHighZ</string>
-          <boolean>true</boolean>
-        </entry>
       </elementAttributes>
       <pos x="580" y="320"/>
     </visualElement>
@@ -75,10 +63,6 @@
         <entry>
           <string>Label</string>
           <string>D_3</string>
-        </entry>
-        <entry>
-          <string>isHighZ</string>
-          <boolean>true</boolean>
         </entry>
       </elementAttributes>
       <pos x="580" y="240"/>
