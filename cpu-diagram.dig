@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>register A</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="-380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>ALU</string>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="-260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>register B</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Instruction Counter</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="-440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>memory</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-260" y="-220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>instruction register</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-320" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>CPU control word: IC r/w/inc, mem adr R, IR r, mem r/w, reg a r/w, reg b r/w, ALU w</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>microinstructions memory</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-380" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>microinstruction counter</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-500" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>memory adr register</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-420" y="-320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>clock</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-580" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>microinstruction memory optimizer?</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>clock: 1
+read and increase ms counter -&gt;
+get control word from ms memory (maybe normalize address first in memory optimizer) -&gt;
+
+output 1st CPU control word: 
+read and increase instruction counter | write memory adr register 
+
+clock 2: 1st cpu control word is executed:
+read and increase IC, 
+store value in memory adr reg, 
+memory instantly puts result into IR, 
+based on IR lookup in ms memory is done
+2nd cpu control word is ready</string>
+        </entry>
+      </elementAttributes>
+      <pos x="380" y="-480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>fibonnacci (n):
+
+# if &lt; 2 can be erased if required n &gt;= 2
+if n &lt; 2 -&gt; n
+smaller &lt;- 0
+bigger &lt;- 1
+until n &gt; 0 do
+.  tmp &lt;- bigger
+.  bigger &lt;- smaller+bigger
+.  smaller &lt;- tmp
+.  n--
+return bigger</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-620" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>2-complementary:
+
+0111   7
+...
+0100   4
+0011    3
+0010    2
+0001    1
+0000    0
+1111   -1
+1110   -2
+1101   -3
+1100   -4
+...
+1001  -7
+1000  -8
+
+
++ 0001   1
+.  1111   -1
+-------------
+  10000  0
+
+0010
+1110</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1500" y="-280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>fibonnacci (n):
+
+set adr of smaller ($00) &lt;- 0
+set adr of bigger ($01) &lt;- 1
+set adr of n ($10) &lt;- n
+
+until n &gt; 0 do
+.  tmp &lt;- bigger (mov $bigger, A; mov A, $tmp)
+.  bigger &lt;- smaller+bigger (mov $smaller, B; save ALU to $bigger)
+.  smaller &lt;- tmp
+.  n--      (n - 1; jne)
+return bigger</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-720" y="1020"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="-40" y="240"/>
+      <p2 x="60" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-260"/>
+      <p2 x="140" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-80" y="-420"/>
+      <p2 x="20" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-180"/>
+      <p2 x="100" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="-200"/>
+      <p2 x="20" y="-200"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-360"/>
+      <p2 x="100" y="-360"/>
+    </wire>
+    <wire>
+      <p1 x="-540" y="40"/>
+      <p2 x="-520" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="40"/>
+      <p2 x="-160" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="-300"/>
+      <p2 x="20" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-340"/>
+      <p2 x="180" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-220"/>
+      <p2 x="180" y="-200"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-440"/>
+      <p2 x="20" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-300"/>
+      <p2 x="20" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-200"/>
+      <p2 x="20" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-360"/>
+      <p2 x="20" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-260"/>
+      <p2 x="20" y="-200"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-420"/>
+      <p2 x="20" y="-360"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="-180"/>
+      <p2 x="20" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="-280"/>
+      <p2 x="-200" y="-240"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="-180"/>
+      <p2 x="-200" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="160"/>
+      <p2 x="-200" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="-80"/>
+      <p2 x="-120" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="-540" y="0"/>
+      <p2 x="-540" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="40"/>
+      <p2 x="-160" y="100"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
