@@ -1049,6 +1049,28 @@
       </elementAttributes>
       <pos x="-200" y="3940"/>
     </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>C E   a_0 a_1 a_2 a_3   D_0 D_1 D_2 D_3   O_0 O_1 O_2 O_3
+
+loop(v, 16)
+ # save
+ repeat(16)     C 1 bits(4, n)    bits(4, v)        bits(4, v)
+ # read ignoring data
+ repeat(16)     0 0 bits(4, n)    x x x x        bits(4, v)
+ repeat(16)     0 1 bits(4, n)    bits(4, ~v)    bits(4, v)
+ repeat(16)     C 0 bits(4, n)    bits(4, ~v)    bits(4, v)
+end loop
+</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="-540" y="280"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
