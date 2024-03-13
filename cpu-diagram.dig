@@ -207,19 +207,30 @@ return bigger</string>
           <string>Description</string>
           <string>fibonnacci (n):
 
-set adr of smaller ($00) &lt;- 0
-set adr of bigger ($01) &lt;- 1
-set adr of n ($10) &lt;- n
+set adr of smaller ($00) &lt;- 0;   mov 0, $1113
+set adr of bigger ($01) &lt;- 1;    mov 1, $1114
+set adr of n ($10) &lt;- n;            mov 7, $1115
 
-until n &gt; 0 do
-.  tmp &lt;- bigger (mov $bigger, A; mov A, $tmp)
-.  bigger &lt;- smaller+bigger (mov $smaller, B; save ALU to $bigger)
-.  smaller &lt;- tmp
-.  n--      (n - 1; jne)
-return bigger</string>
+until n &gt; 0 do ; .label-loop $3
+.  tmp &lt;- bigger (mov $bigger, A; mov A, $tmp) (#2)
+.  bigger &lt;- smaller+bigger (mov $smaller, B; save ALU to $bigger) (#2)
+.  smaller &lt;- tmp              (#1
+.  n--      (n - 1; jne);       mov $1115, regA; dec A???/ mov -1, regB; mov ALU, $1115  (3-4inst)
+                                     jne label-loop ($3)
+return bigger;                hlt</string>
         </entry>
       </elementAttributes>
       <pos x="-720" y="1020"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>mov src-literal-value, dst-literal-memory-location;   0 2-bit 2-bit</string>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="580"/>
     </visualElement>
   </visualElements>
   <wires>
