@@ -8,7 +8,7 @@
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>enable output. output to D</string>
+          <string>enable write to the register</string>
         </entry>
         <entry>
           <string>Label</string>
