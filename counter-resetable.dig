@@ -244,16 +244,6 @@
       <pos x="1000" y="1000"/>
     </visualElement>
     <visualElement>
-      <elementName>Or</elementName>
-      <elementAttributes>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="1240" y="1000"/>
-    </visualElement>
-    <visualElement>
       <elementName>Delay</elementName>
       <elementAttributes>
         <entry>
@@ -264,15 +254,19 @@
       <pos x="1080" y="960"/>
     </visualElement>
     <visualElement>
-      <elementName>Text</elementName>
+      <elementName>rising-edge-detector.dig</elementName>
+      <elementAttributes/>
+      <pos x="1080" y="920"/>
+    </visualElement>
+    <visualElement>
+      <elementName>XOr</elementName>
       <elementAttributes>
         <entry>
-          <string>Description</string>
-          <string>async reset doesn&apos;t work when clock is on
-better start needed</string>
+          <string>wideShape</string>
+          <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="880" y="840"/>
+      <pos x="1240" y="1000"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -297,12 +291,12 @@ better start needed</string>
       <p2 x="980" y="960"/>
     </wire>
     <wire>
-      <p1 x="1120" y="960"/>
-      <p2 x="1220" y="960"/>
+      <p1 x="1020" y="960"/>
+      <p2 x="1080" y="960"/>
     </wire>
     <wire>
       <p1 x="980" y="960"/>
-      <p2 x="1080" y="960"/>
+      <p2 x="1020" y="960"/>
     </wire>
     <wire>
       <p1 x="300" y="1220"/>
@@ -419,6 +413,14 @@ better start needed</string>
     <wire>
       <p1 x="1100" y="1560"/>
       <p2 x="1240" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="920"/>
+      <p2 x="1080" y="920"/>
+    </wire>
+    <wire>
+      <p1 x="1140" y="920"/>
+      <p2 x="1220" y="920"/>
     </wire>
     <wire>
       <p1 x="860" y="1440"/>
@@ -577,24 +579,12 @@ better start needed</string>
       <p2 x="580" y="1240"/>
     </wire>
     <wire>
-      <p1 x="1380" y="1300"/>
-      <p2 x="1380" y="1580"/>
-    </wire>
-    <wire>
-      <p1 x="1220" y="960"/>
+      <p1 x="1220" y="920"/>
       <p2 x="1220" y="1000"/>
     </wire>
     <wire>
       <p1 x="520" y="1260"/>
       <p2 x="520" y="1580"/>
-    </wire>
-    <wire>
-      <p1 x="360" y="1280"/>
-      <p2 x="360" y="1680"/>
-    </wire>
-    <wire>
-      <p1 x="680" y="1080"/>
-      <p2 x="680" y="1480"/>
     </wire>
     <wire>
       <p1 x="1100" y="1020"/>
@@ -613,20 +603,8 @@ better start needed</string>
       <p2 x="1100" y="1340"/>
     </wire>
     <wire>
-      <p1 x="300" y="1220"/>
-      <p2 x="300" y="1740"/>
-    </wire>
-    <wire>
-      <p1 x="1580" y="1240"/>
-      <p2 x="1580" y="1700"/>
-    </wire>
-    <wire>
       <p1 x="1360" y="1280"/>
       <p2 x="1360" y="1460"/>
-    </wire>
-    <wire>
-      <p1 x="560" y="1220"/>
-      <p2 x="560" y="1360"/>
     </wire>
     <wire>
       <p1 x="400" y="1300"/>
@@ -665,14 +643,6 @@ better start needed</string>
       <p2 x="1560" y="1680"/>
     </wire>
     <wire>
-      <p1 x="1340" y="1020"/>
-      <p2 x="1340" y="1220"/>
-    </wire>
-    <wire>
-      <p1 x="1340" y="1260"/>
-      <p2 x="1340" y="1360"/>
-    </wire>
-    <wire>
       <p1 x="540" y="1240"/>
       <p2 x="540" y="1460"/>
     </wire>
@@ -693,8 +663,44 @@ better start needed</string>
       <p2 x="860" y="1340"/>
     </wire>
     <wire>
+      <p1 x="1380" y="1300"/>
+      <p2 x="1380" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="1280"/>
+      <p2 x="360" y="1680"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="1080"/>
+      <p2 x="680" y="1480"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="1220"/>
+      <p2 x="300" y="1740"/>
+    </wire>
+    <wire>
+      <p1 x="1580" y="1240"/>
+      <p2 x="1580" y="1700"/>
+    </wire>
+    <wire>
+      <p1 x="560" y="1220"/>
+      <p2 x="560" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="1340" y="1020"/>
+      <p2 x="1340" y="1220"/>
+    </wire>
+    <wire>
+      <p1 x="1340" y="1260"/>
+      <p2 x="1340" y="1360"/>
+    </wire>
+    <wire>
       <p1 x="700" y="1040"/>
       <p2 x="700" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="920"/>
+      <p2 x="1020" y="960"/>
     </wire>
   </wires>
   <measurementOrdering/>
