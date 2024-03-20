@@ -12,10 +12,6 @@
         <roms/>
       </romList>
     </entry>
-    <entry>
-      <string>lockedMode</string>
-      <boolean>true</boolean>
-    </entry>
   </attributes>
   <visualElements>
     <visualElement>
