@@ -1,5 +1,7 @@
 # CPU from logic gates
 
+https://github.com/piotrturski/cpu-from-logic-gates/assets/3491230/d73b3f9d-99be-44d1-bb15-91c36a6872f0
+
 ## Why?
 Some time ago I realized
 that even if I knew a CPU and memory are just a bunch of light switches, 
